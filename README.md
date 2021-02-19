@@ -1,4 +1,4 @@
-# Install Docker With Kind
+# Install Kubernetes With Kind
 
 Install Go
 ```
@@ -19,6 +19,21 @@ curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.10.0/kind-darwin-amd64
 mv kind /usr/local/bin/
 chmod +x /usr/local/bin/kind
 ```
+
+
+Create the cluster
+```
+kind create cluster
+kubectl cluster-info --context kind-kind
+
+kind get kubeconfig
+
+kind delete cluster
+
+unset KUBECONFIG
+```
+
+
 
 
 
